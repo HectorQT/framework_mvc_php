@@ -2,19 +2,51 @@
 
 namespace App;
 
+
 class Route {
+
+    private $routes;
+
+    public function __construct() {
+        $this->initRoutes();
+        $this->run($this->getUrl());
+    }
+
+    public function getRoutes() {
+        return $this->routes;
+    }
+
+    public function setRoutes(array $routes) {
+        $this->routes = $routes;
+    }
 
     public function initRoutes() {
         $routes['home'] = array (
             'route' => '/',
-            'controller' => 'indexController',
+            'controller' => 'IndexController',
             'action' => 'index'
         );
         $routes['sobre_nos'] = array(
             'route' => '/sobre_nos',
-            'controller' => 'indexController',
+            'controller' => 'IndexController',
             'action' => 'sobreNos'
         );
+
+        $this->setRoutes($routes);
+    }
+
+    public function run($url) {
+        foreach ($this->getRoutes() as $page => $config_page) {
+            if ($url == $config_page['route']) {
+                $class = "App\\Controllers\\"  . $config_page['controller'];
+                $controller = new $class;
+                $action = $config_page['action'];
+                $controller->$action();
+
+            }
+        }
+
+
     }
 
     /**
@@ -25,6 +57,7 @@ class Route {
      * Ela poder possuir parâmetros como PHP_URL_PATH que só retorna o path;
      * 
      */
+    
     public function getUrl() {
         return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); 
     }
