@@ -1,5 +1,11 @@
 <?php 
 
+/*
+Camada de abstração do Route, onde seperamos toda a camáda lógica
+que manipula os atributos. Assim, condesamos em Route só as informações
+importantes da página acessada (Rota, Controlador e Ação);
+*/
+
 namespace MF\Init;
 
 //Classe abstract tem como particularidade o fato de que ela não pode ser instanciada, somente herdada.
