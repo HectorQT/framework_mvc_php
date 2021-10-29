@@ -2,7 +2,9 @@
 <hr/>
 
 <?php 
-
+    echo '<pre>';
+    print_r($this->view->dados);
+    echo '</pre>';
     foreach($this->view->dados as $indice => $valor){
         echo $valor;
         echo '<br/>';
