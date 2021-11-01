@@ -1,13 +1,7 @@
 <h1>INDEX VIEW</h1>
 <hr/>
 
-<?php 
-    echo '<pre>';
-    print_r($this->view->dados);
-    echo '</pre>';
-    foreach($this->view->dados as $indice => $valor){
-        echo $valor;
-        echo '<br/>';
-    }
-    
-?>
+
+<?php foreach($this->view->dados as $indice => $valor){ ?>
+    <p>Item: <?=$valor['descricao']?> _________ Valor: <?= $valor['preco']?></p>
+<?php } ?>

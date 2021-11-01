@@ -3,13 +3,13 @@
 namespace App\Models;
 use MF\Model\Model;
 
-class Produto extends Model {
+class Info extends Model {
     
     protected $db;
 
-    public function getProdutos(){
+    public function getInfo(){
     
-        $query = "SELECT id, descricao, preco from tb_produtos";
+        $query = "SELECT titulo, descricao from tb_info";
         return $this->db->query($query)->fetchAll();
     }
 }

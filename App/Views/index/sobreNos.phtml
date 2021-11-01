@@ -1,11 +1,7 @@
 <h1>SOBRE NÓS VIEW</h1>
 <hr/>
 
-<?php 
-
-    foreach($this->view->dados as $indice => $valor){
-        echo $valor;
-        echo '<br/>';
-    }
-    
-?>
+<?php foreach($this->view->dados as $indice => $valor){ ?>
+   <h2><?= $valor['titulo']?></h2>
+   <p><?= $valor['descricao']?></p>
+<?php } ?>
