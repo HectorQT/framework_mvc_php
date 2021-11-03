@@ -14,7 +14,7 @@
 # Pré Requisitos
 
 ## Orientação a Objetos
-É de suma importância que, antes de utilizar esse repositório, se tenha conhecimentos prévios de <b>Orientação a Objetos</b> já que esta arquitetura é voltada para este paradigma. Outro motivo, é que, visando um código mais limpo e organizado, há um nível de abstração considerado alto para quem não está acostumado com esse tema.
+É de suma importância que, antes de utilizar esse repositório, se tenha conhecimentos prévios de <b>Orientação a Objetos</b> já que esta arquitetura é voltada para este paradigma. Outro motivo, é que visando um código mais limpo e organizado, há um nível de abstração considerado alto para quem não está acostumado com esse tema.
 ## Composer e Autoload PSR-4
 O Composer é um gerenciador de pacotes no nível do aplicativo para a linguagem de programação PHP que fornece um formato padrão para gerenciar dependências do software PHP e bibliotecas necessárias. 
 
@@ -25,7 +25,7 @@ php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40
 php composer-setup.php
 php -r "unlink('composer-setup.php')
 ```
-Logo após você precisa configurar um arquivo com o seguinte nome "composer.json" na raiz do seu projeto e editá-lo da seguinte forma:
+Em seguida, você precisa configurar um arquivo com o seguinte nome "composer.json" na raiz do seu projeto e editá-lo da seguinte forma:
 ```PHP
 {
     "name":"vendor_name/nome_projeto",
@@ -57,7 +57,7 @@ php composer.phar install
 
 
 # Modulo de roteamento
-As rotas por sua vez não estão diretamente ligadas a arquitetura MVC, entretanto esse sistema de roteamento tem um papel muito importante na aplicação. O cliente fara requisições HTTP enviando caminhos e solicitando diversos recursos da página, sendo assim o módulo de roteamento vai nortear as atividades do Controlador de forma que dependendo da página solicitada pelo cliente, o arquivo **Route.php** instancie o Controller respónsavel pela rota acessada e execute suas respectivas actions.
+As rotas, por sua vez, não estão diretamente ligadas a arquitetura MVC, entretanto esse sistema de roteamento tem um papel muito importante na aplicação. O cliente fara requisições HTTP enviando caminhos e solicitando diversos recursos da página, sendo assim o módulo de roteamento vai nortear as atividades do Controlador de forma que dependendo da página solicitada pelo cliente, o arquivo **Route.php** instancie o Controller respónsavel pela rota acessada e execute suas respectivas actions.
 
 # Controller
 O Controller (controlador) existe entre as camadas View e Model. Ele ouve os eventos disparados pela visualização e executa a reação apropriada a esses eventos. 
