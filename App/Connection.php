@@ -6,7 +6,7 @@ class Connection {
 
     public static function getDb() {
         try {
-            $conn = new \PDO("pgsql:host=localhost;dbname=motoca", "postgres", 'M0t0c4PG');
+            $conn = new \PDO("#pdodrive:host=#localhost;dbname=#nomedobanco", "#usuario", '#senha');
             $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             return $conn;
 
