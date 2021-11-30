@@ -2,11 +2,12 @@
 <div align="rigth">
     <p>
         1. <a href="#pré-requisitos">Pré Requisitos</a> </br>
-        &nbsp&nbsp&nbsp1.1 <a href="#orientação-a-objetos">Orientação a Objetos</a> </br>
+         &nbsp&nbsp&nbsp1.1 <a href="#orientação-a-objetos">Orientação a Objetos</a> </br>
          &nbsp&nbsp&nbsp1.2 <a href="#composer-e-autoload-psr-4">Composer e Autoload PSR-4</a> </br>
-        2. <a href="#controller">Controller</a> </br>
-        3. <a href="#view">View</a> </br>
-        4. <a href="#model">Model</a>
+        2. <a href="#módulo-de-roteamento">Módulo de Roteamento</a> </br>
+        3. <a href="#controller">Controller</a> </br>
+        4. <a href="#view">View</a> </br>
+        5. <a href="#model">Model</a>
     </p>
 </div> 
 
@@ -56,7 +57,7 @@ php composer.phar install
 ```
 
 
-# Modulo de roteamento
+# Módulo de roteamento
 As rotas, por sua vez, não estão diretamente ligadas a arquitetura MVC, entretanto esse sistema de roteamento tem um papel muito importante na aplicação. O cliente fara requisições HTTP enviando caminhos e solicitando diversos recursos da página, sendo assim o módulo de roteamento vai nortear as atividades do Controlador de forma que dependendo da página solicitada pelo cliente, o arquivo **Route.php** instancie o Controller respónsavel pela rota acessada e execute suas respectivas actions.
 
 # Controller
